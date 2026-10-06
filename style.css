@@ -1,0 +1,1235 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #050510;
+    color: white;
+    overflow-x: hidden;
+}
+
+.hero {
+    position: relative;
+    min-height: 100vh;
+    overflow: hidden;
+    background:
+        radial-gradient(circle at 75% 50%, #25205a 0%, transparent 30%),
+        linear-gradient(135deg, #050510 0%, #090923 55%, #101044 100%);
+}
+
+.navbar {
+    position: relative;
+    z-index: 10;
+
+    width: min(1200px, 90%);
+    margin: auto;
+    padding: 35px 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+    letter-spacing: 7px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 40px;
+}
+
+.nav-links a {
+    color: #b9b9ca;
+    text-decoration: none;
+    font-size: 14px;
+
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: white;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 5;
+
+    width: min(1200px, 90%);
+    margin: auto;
+
+    padding-top: 12vh;
+}
+
+.subtitle {
+    color: #8d83ff;
+
+    font-size: 12px;
+    font-weight: bold;
+
+    letter-spacing: 5px;
+
+    margin-bottom: 25px;
+}
+
+h1 {
+    max-width: 800px;
+
+    font-size: clamp(45px, 6vw, 90px);
+    line-height: 0.98;
+
+    letter-spacing: -4px;
+}
+
+h1 span {
+    color: #9c91ff;
+}
+
+.description {
+    max-width: 500px;
+
+    color: #aaaabd;
+
+    font-size: 17px;
+    line-height: 1.7;
+
+    margin-top: 30px;
+}
+
+.hero-button {
+    display: inline-block;
+
+    margin-top: 35px;
+    padding: 16px 27px;
+
+    border: 1px solid #7770d8;
+    border-radius: 100px;
+
+    color: white;
+    text-decoration: none;
+
+    transition: 0.3s;
+}
+
+.hero-button:hover {
+    background: #8177ff;
+
+    box-shadow:
+        0 0 30px rgba(129, 119, 255, 0.5);
+
+    transform: translateY(-3px);
+}
+
+.planet {
+    position: absolute;
+
+    width: 600px;
+    height: 600px;
+
+    right: -130px;
+    bottom: -250px;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle at 35% 30%,
+            #aaa3ff,
+            #5146bb 30%,
+            #18164b 65%,
+            #07071c 80%
+        );
+
+    box-shadow:
+        -40px -30px 100px rgba(115, 101, 255, 0.25),
+        inset -60px -50px 100px rgba(0, 0, 0, 0.8);
+}
+
+.scroll-text {
+    position: absolute;
+
+    right: 45px;
+    top: 50%;
+
+    font-size: 9px;
+    letter-spacing: 4px;
+
+    color: #74748d;
+
+    transform: rotate(90deg);
+}
+
+/* CELULAR */
+
+@media (max-width: 700px) {
+
+    .navbar {
+        padding-top: 25px;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .hero-content {
+        padding-top: 12vh;
+    }
+
+    h1 {
+        font-size: 52px;
+        letter-spacing: -2px;
+    }
+
+    .description {
+        font-size: 15px;
+        max-width: 85%;
+    }
+
+    .planet {
+        width: 420px;
+        height: 420px;
+
+        right: -190px;
+        bottom: -180px;
+    }
+
+    .scroll-text {
+        display: none;
+    }
+}
+
+/* ESTRELAS */
+
+.stars {
+    position: fixed;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    pointer-events: none;
+    z-index: 1;
+
+    overflow: hidden;
+}
+
+.stars span {
+    position: absolute;
+
+    display: block;
+
+    background: white;
+    border-radius: 50%;
+
+    opacity: 0.25;
+
+    animation: twinkle 3s infinite ease-in-out;
+}
+
+@keyframes twinkle {
+
+    0%,
+    100% {
+        opacity: 0.15;
+        transform: scale(1);
+    }
+
+    50% {
+        opacity: 0.9;
+        transform: scale(1.8);
+    }
+}
+
+/* DESTINOS */
+
+.destinations {
+    position: relative;
+    z-index: 2;
+
+    min-height: 100vh;
+    padding: 130px 5%;
+
+    background:
+        radial-gradient(circle at 50% 100%, #171442 0%, transparent 35%),
+        #050510;
+}
+
+.section-header {
+    width: min(1200px, 100%);
+    margin: 0 auto 80px;
+}
+
+.section-number {
+    color: #8177ff;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 5px;
+
+    margin-bottom: 25px;
+}
+
+.section-header h2 {
+    font-size: clamp(45px, 6vw, 80px);
+    line-height: 1;
+
+    letter-spacing: -3px;
+}
+
+.section-header h2 span {
+    color: #9389ff;
+}
+
+.section-description {
+    max-width: 500px;
+
+    color: #9292a8;
+    line-height: 1.7;
+
+    margin-top: 25px;
+}
+
+.destination-grid {
+    width: min(1200px, 100%);
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+.destination-card {
+    position: relative;
+
+    min-height: 500px;
+    padding: 35px;
+
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+
+    background: rgba(255, 255, 255, 0.025);
+
+    overflow: hidden;
+
+    transition:
+        transform 0.4s ease,
+        border 0.4s ease,
+        background 0.4s ease;
+}
+
+.destination-card:hover {
+    transform: translateY(-12px);
+
+    border-color: rgba(145, 135, 255, 0.7);
+
+    background: rgba(125, 110, 255, 0.08);
+}
+
+.mini-planet {
+    width: 180px;
+    height: 180px;
+
+    margin: 15px auto 50px;
+
+    border-radius: 50%;
+
+    transition: transform 0.6s ease;
+}
+
+.destination-card:hover .mini-planet {
+    transform: scale(1.08) rotate(8deg);
+}
+
+.moon {
+    background:
+        radial-gradient(circle at 35% 30%, #eeeeee, #92929a 45%, #34343b 75%);
+
+    box-shadow: 0 0 50px rgba(255, 255, 255, 0.12);
+}
+
+.mars {
+    background:
+        radial-gradient(circle at 35% 30%, #e99b72, #a4422f 45%, #451712 80%);
+
+    box-shadow: 0 0 60px rgba(214, 82, 49, 0.2);
+}
+
+.europa {
+    background:
+        linear-gradient(25deg, transparent 40%, rgba(92, 50, 25, 0.8) 42%, transparent 46%),
+        linear-gradient(-30deg, transparent 48%, rgba(109, 62, 34, 0.7) 50%, transparent 53%),
+        radial-gradient(circle at 35% 30%, #fff5d8, #bfa477 60%, #5f503d);
+
+    box-shadow: 0 0 60px rgba(255, 225, 174, 0.15);
+}
+
+.distance {
+    color: #8177ff;
+
+    font-size: 10px;
+    letter-spacing: 3px;
+
+    margin-bottom: 10px;
+}
+
+.destination-card h3 {
+    font-size: 40px;
+
+    margin-bottom: 15px;
+}
+
+.card-description {
+    color: #9292a8;
+
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.card-footer {
+    position: absolute;
+
+    bottom: 30px;
+    left: 35px;
+    right: 35px;
+
+    display: flex;
+    justify-content: space-between;
+
+    padding-top: 20px;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+
+    color: #b4b4c8;
+
+    font-size: 11px;
+    letter-spacing: 2px;
+}
+
+/* ANIMAÇÃO AO ROLAR */
+
+.reveal {
+    opacity: 0;
+    transform: translateY(70px);
+
+    transition:
+        opacity 0.8s ease,
+        transform 0.8s ease;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* DESTINOS NO CELULAR */
+
+@media (max-width: 800px) {
+
+    .destinations {
+        padding: 90px 6%;
+    }
+
+    .destination-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .destination-card {
+        min-height: 470px;
+    }
+
+    .section-header {
+        margin-bottom: 50px;
+    }
+}
+
+/* NAVE */
+
+/* NAVE */
+
+.spaceship {
+    position: fixed;
+
+    left: 4%;
+    top: 85%;
+
+    z-index: 20;
+
+    width: 75px;
+    height: 45px;
+
+    pointer-events: none;
+
+    opacity: 0;
+
+    filter: drop-shadow(
+        0 0 15px rgba(129, 119, 255, 0.7)
+    );
+
+    transition: opacity 0.3s ease;
+}
+
+.ship {
+    position: relative;
+
+    width: 75px;
+    height: 45px;
+}
+
+/* CORPO */
+
+.ship-body {
+    position: absolute;
+
+    width: 55px;
+    height: 25px;
+
+    left: 10px;
+    top: 10px;
+
+    border-radius: 60% 100% 100% 60%;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ffffff,
+            #b8b3ff 55%,
+            #6e63d9
+        );
+
+    box-shadow:
+        inset -8px -5px 10px rgba(0, 0, 0, 0.25);
+}
+
+/* JANELA */
+
+.ship-window {
+    position: absolute;
+
+    width: 12px;
+    height: 12px;
+
+    right: 12px;
+    top: 6px;
+
+    border-radius: 50%;
+
+    background: #17143d;
+
+    border: 2px solid #8177ff;
+
+    box-shadow:
+        0 0 8px #8177ff;
+}
+
+/* ASAS */
+
+.ship-wing {
+    position: absolute;
+
+    width: 25px;
+    height: 13px;
+
+    left: 23px;
+
+    background: #7167e8;
+}
+
+.ship-wing-top {
+    top: 3px;
+
+    clip-path: polygon(
+        0 100%,
+        100% 0,
+        80% 100%
+    );
+}
+
+.ship-wing-bottom {
+    bottom: 3px;
+
+    clip-path: polygon(
+        0 0,
+        100% 100%,
+        80% 0
+    );
+}
+
+/* MOTOR */
+
+.ship-engine {
+    position: absolute;
+
+    width: 10px;
+    height: 17px;
+
+    left: 4px;
+    top: 14px;
+
+    border-radius: 4px;
+
+    background: #5148ad;
+}
+
+/* FOGO */
+
+.ship-flame {
+    position: absolute;
+
+    width: 27px;
+    height: 12px;
+
+    left: -20px;
+    top: 17px;
+
+    border-radius: 100% 0 0 100%;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            #8177ff,
+            #d9d6ff
+        );
+
+    filter: blur(1px);
+
+    animation: engineFlame 0.15s infinite alternate;
+}
+
+@keyframes engineFlame {
+
+    from {
+        transform: scaleX(0.75);
+        opacity: 0.6;
+    }
+
+    to {
+        transform: scaleX(1.15);
+        opacity: 1;
+    }
+}
+
+/* EXPERIÊNCIA */
+
+.experience {
+    position: relative;
+    z-index: 2;
+
+    min-height: 100vh;
+    padding: 140px 5%;
+
+    background:
+        radial-gradient(circle at 0% 50%, #171342 0%, transparent 30%),
+        #080814;
+}
+
+.experience-content {
+    width: min(1200px, 100%);
+    margin: auto;
+}
+
+.experience-text h2 {
+    max-width: 950px;
+
+    font-size: clamp(42px, 5vw, 72px);
+    line-height: 1.05;
+    letter-spacing: -3px;
+}
+
+.experience-text h2 span {
+    color: #9389ff;
+}
+
+.experience-text > p:last-child {
+    max-width: 580px;
+
+    margin-top: 30px;
+
+    color: #9292a8;
+    line-height: 1.8;
+}
+
+/* CAMINHO DA VIAGEM */
+
+.journey-line {
+    position: relative;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 60px;
+
+    margin-top: 110px;
+    padding-top: 35px;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.journey-point {
+    position: relative;
+}
+
+.journey-point::before {
+    content: "";
+
+    position: absolute;
+
+    width: 12px;
+    height: 12px;
+
+    top: -42px;
+    left: 0;
+
+    border-radius: 50%;
+
+    background: #9389ff;
+
+    box-shadow:
+        0 0 20px #8177ff,
+        0 0 40px rgba(129, 119, 255, 0.5);
+}
+
+.journey-point span {
+    display: block;
+
+    margin-bottom: 15px;
+
+    color: #8177ff;
+
+    font-size: 11px;
+    letter-spacing: 3px;
+}
+
+.journey-point strong {
+    display: block;
+
+    font-size: 25px;
+
+    margin-bottom: 12px;
+}
+
+.journey-point p {
+    max-width: 280px;
+
+    color: #85859a;
+
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+/* NÚMEROS */
+
+.stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    margin-top: 120px;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.stat {
+    padding: 55px 30px;
+
+    text-align: center;
+
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.stat:last-child {
+    border-right: none;
+}
+
+.stat strong,
+.stat b {
+    font-size: clamp(55px, 6vw, 90px);
+    line-height: 1;
+
+    color: white;
+}
+
+.stat b {
+    color: #8177ff;
+}
+
+.stat > span {
+    display: block;
+
+    margin-top: 15px;
+
+    color: #77778d;
+
+    font-size: 10px;
+    letter-spacing: 3px;
+}
+
+/* EXPERIÊNCIA NO CELULAR */
+
+@media (max-width: 800px) {
+
+    .experience {
+        padding: 90px 6%;
+    }
+
+    .journey-line {
+        grid-template-columns: 1fr;
+
+        gap: 60px;
+
+        margin-top: 80px;
+
+        padding-top: 0;
+        padding-left: 35px;
+
+        border-top: none;
+        border-left: 1px solid rgba(255, 255, 255, 0.15);
+    }
+
+    .journey-point::before {
+        top: 4px;
+        left: -42px;
+    }
+
+    .stats {
+        grid-template-columns: 1fr;
+
+        margin-top: 80px;
+    }
+
+    .stat {
+        border-right: none;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .stat:last-child {
+        border-bottom: none;
+    }
+}
+
+/* TELA FINAL */
+
+.final-section {
+    position: relative;
+    z-index: 2;
+
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+
+    padding: 100px 5%;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(circle at 80% 50%, #292267 0%, transparent 32%),
+        #050510;
+}
+
+.final-content {
+    position: relative;
+    z-index: 5;
+
+    width: min(1200px, 100%);
+    margin: auto;
+}
+
+.final-content h2 {
+    max-width: 900px;
+
+    font-size: clamp(65px, 9vw, 135px);
+    line-height: 0.85;
+    letter-spacing: -7px;
+}
+
+.final-content h2 span {
+    color: #9389ff;
+}
+
+.final-content > p:not(.section-number) {
+    max-width: 500px;
+
+    margin-top: 35px;
+
+    color: #9999ad;
+
+    line-height: 1.8;
+}
+
+.reserve-button {
+    margin-top: 40px;
+
+    padding: 18px 30px;
+
+    border: 1px solid #8177ff;
+    border-radius: 100px;
+
+    background: transparent;
+    color: white;
+
+    font-size: 12px;
+    letter-spacing: 2px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.reserve-button span {
+    display: inline-block;
+
+    margin-left: 20px;
+
+    transition: transform 0.3s;
+}
+
+.reserve-button:hover {
+    background: #8177ff;
+
+    box-shadow:
+        0 0 40px rgba(129, 119, 255, 0.4);
+
+    transform: translateY(-3px);
+}
+
+.reserve-button:hover span {
+    transform: translateX(6px);
+}
+
+/* PLANETA FINAL */
+
+.final-planet {
+    position: absolute;
+
+    width: 750px;
+    height: 750px;
+
+    right: -300px;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle at 30% 25%,
+            #c3beff,
+            #6257ce 30%,
+            #282063 60%,
+            #09091e 80%
+        );
+
+    box-shadow:
+        -50px 0 120px rgba(117, 102, 255, 0.25),
+        inset -80px -40px 130px rgba(0, 0, 0, 0.8);
+}
+
+/* RODAPÉ */
+
+footer {
+    position: relative;
+    z-index: 5;
+
+    background: #030309;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+
+    padding: 35px 5%;
+}
+
+.footer-content {
+    width: min(1200px, 100%);
+    margin: auto;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 30px;
+
+    color: #66667a;
+
+    font-size: 11px;
+}
+
+.footer-logo {
+    color: white;
+
+    font-weight: bold;
+    letter-spacing: 5px;
+}
+
+/* MODAL */
+
+.modal {
+    position: fixed;
+    inset: 0;
+
+    z-index: 100;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 20px;
+
+    background: rgba(3, 3, 15, 0.85);
+
+    backdrop-filter: blur(15px);
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition: 0.35s;
+}
+
+.modal.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal-content {
+    position: relative;
+
+    width: min(500px, 100%);
+
+    padding: 45px;
+
+    border:
+        1px solid rgba(143, 132, 255, 0.3);
+
+    border-radius: 25px;
+
+    background: #0b0b1d;
+
+    transform: translateY(30px) scale(0.96);
+
+    transition: 0.35s;
+}
+
+.modal.active .modal-content {
+    transform: translateY(0) scale(1);
+}
+
+.modal-content h2 {
+    margin-bottom: 30px;
+
+    font-size: 35px;
+}
+
+.close-modal {
+    position: absolute;
+
+    top: 20px;
+    right: 25px;
+
+    border: none;
+
+    background: transparent;
+    color: #88889d;
+
+    font-size: 30px;
+
+    cursor: pointer;
+}
+
+.modal form {
+    display: flex;
+    flex-direction: column;
+
+    gap: 20px;
+}
+
+.modal label {
+    display: flex;
+    flex-direction: column;
+
+    gap: 8px;
+
+    color: #9292a8;
+
+    font-size: 12px;
+}
+
+.modal input,
+.modal select {
+    width: 100%;
+
+    padding: 15px;
+
+    border:
+        1px solid rgba(255, 255, 255, 0.1);
+
+    border-radius: 10px;
+
+    outline: none;
+
+    background: #111126;
+    color: white;
+}
+
+.modal input:focus,
+.modal select:focus {
+    border-color: #8177ff;
+}
+
+.submit-button {
+    margin-top: 10px;
+
+    padding: 16px;
+
+    border: none;
+    border-radius: 10px;
+
+    background: #8177ff;
+    color: white;
+
+    cursor: pointer;
+
+    font-weight: bold;
+
+    letter-spacing: 1px;
+}
+
+.form-message {
+    margin-top: 20px;
+
+    color: #a79fff;
+
+    text-align: center;
+}
+
+/* FINAL NO CELULAR */
+
+@media (max-width: 800px) {
+
+    .final-section {
+        padding: 100px 6%;
+    }
+
+    .final-content h2 {
+        font-size: 65px;
+
+        letter-spacing: -4px;
+    }
+
+    .final-planet {
+        width: 500px;
+        height: 500px;
+
+        right: -350px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+
+        text-align: center;
+    }
+
+    .modal-content {
+        padding: 35px 25px;
+    }
+}
+
+/* AJUSTES FINAIS PARA CELULAR */
+
+@media (max-width: 800px) {
+
+    /* A nave fica apenas na experiência desktop */
+    .spaceship {
+        display: none;
+    }
+
+    /* Primeira tela */
+    .hero {
+        min-height: 100svh;
+    }
+
+    .hero-content {
+        padding-top: 8vh;
+    }
+
+    .hero-content h1 {
+        font-size: clamp(42px, 14vw, 52px);
+        line-height: 0.98;
+        letter-spacing: -2px;
+    }
+
+    .hero-content .description {
+        max-width: 90%;
+        line-height: 1.7;
+    }
+
+    /* Destinos */
+    .section-header h2 {
+        font-size: clamp(40px, 13vw, 55px);
+        letter-spacing: -2px;
+    }
+
+    .destination-card {
+        padding: 28px;
+    }
+
+    /* Experiência */
+    .experience-text h2 {
+        font-size: clamp(40px, 12vw, 52px);
+        letter-spacing: -2px;
+    }
+
+    /* Tela final */
+    .final-content h2 {
+        font-size: clamp(55px, 17vw, 75px);
+        line-height: 0.9;
+        letter-spacing: -4px;
+    }
+
+    .final-content {
+        position: relative;
+        z-index: 5;
+    }
+
+    .final-planet {
+        width: 430px;
+        height: 430px;
+
+        right: -320px;
+
+        opacity: 0.75;
+    }
+
+    /* Modal */
+    .modal {
+        overflow-y: auto;
+    }
+
+    .modal-content {
+        margin: auto;
+        max-height: 95svh;
+        overflow-y: auto;
+    }
+}
+
+/* Celulares bem pequenos */
+
+@media (max-width: 360px) {
+
+    .hero-content h1 {
+        font-size: 44px;
+    }
+
+    .final-content h2 {
+        font-size: 57px;
+    }
+
+}

@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Órbita | Viagens Além da Terra</title>
+
+    <meta
+        name="description"
+        content="Órbita é uma experiência digital conceitual de turismo espacial, desenvolvida com HTML, CSS e JavaScript."
+    >
+
+    <meta name="author" content="Jeferson Alves">
+
+    <meta
+        name="theme-color"
+        content="#080814"
+    >
+
+    <link
+        rel="icon"
+        href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🪐</text></svg>"
+    >
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="spaceship">
+       <div class="ship">
+            <div class="ship-body">
+                <div class="ship-window"></div>
+            </div>
+
+            <div class="ship-wing ship-wing-top"></div>
+            <div class="ship-wing ship-wing-bottom"></div>
+
+            <div class="ship-engine"></div>
+            <div class="ship-flame"></div>
+        </div>
+    </div>
+
+    <header class="hero">
+
+        <nav class="navbar">
+            <div class="logo">ÓRBITA</div>
+
+            <div class="nav-links">
+                <a href="#destinos">Destinos</a>
+                <a href="#experiencia">Experiência</a>
+                <a href="#contato">Contato</a>
+            </div>
+        </nav>
+
+        <div class="hero-content">
+            <p class="subtitle">O UNIVERSO ESTÁ MAIS PERTO</p>
+
+            <h1>
+                Sua próxima viagem<br>
+                começa <span>além da Terra.</span>
+            </h1>
+
+            <p class="description">
+                Experiências espaciais criadas para quem acredita
+                que o mundo nunca foi o limite.
+            </p>
+
+            <a href="#destinos" class="hero-button">
+                Explorar destinos ↓
+            </a>
+        </div>
+
+        <div class="planet"></div>
+
+        <div class="scroll-text">
+            ROLE PARA EXPLORAR
+        </div>
+
+    </header>
+    <section class="destinations" id="destinos">
+
+    <div class="section-header reveal">
+        <p class="section-number">01 — DESTINOS</p>
+
+        <h2>
+            Até onde você<br>
+            gostaria de <span>ir?</span>
+        </h2>
+
+        <p class="section-description">
+            Três destinos. Três experiências completamente diferentes.
+            Escolha até onde você está disposto a explorar.
+        </p>
+    </div>
+
+    <div class="destination-grid">
+
+        <article class="destination-card reveal">
+            <div class="mini-planet moon"></div>
+
+            <p class="distance">384.400 KM</p>
+            <h3>Lua</h3>
+
+            <p class="card-description">
+                Veja a Terra de uma perspectiva que poucas pessoas
+                tiveram a oportunidade de conhecer.
+            </p>
+
+            <div class="card-footer">
+                <span>3 DIAS</span>
+                <span>→</span>
+            </div>
+        </article>
+
+        <article class="destination-card reveal">
+            <div class="mini-planet mars"></div>
+
+            <p class="distance">225 MILHÕES KM</p>
+            <h3>Marte</h3>
+
+            <p class="card-description">
+                Atravesse milhões de quilômetros e caminhe
+                pelas paisagens vermelhas de outro mundo.
+            </p>
+
+            <div class="card-footer">
+                <span>7 MESES</span>
+                <span>→</span>
+            </div>
+        </article>
+
+        <article class="destination-card reveal">
+            <div class="mini-planet europa"></div>
+
+            <p class="distance">628 MILHÕES KM</p>
+            <h3>Europa</h3>
+
+            <p class="card-description">
+                Viaje até uma das luas mais fascinantes de Júpiter
+                e descubra um mundo coberto por gelo.
+            </p>
+
+            <div class="card-footer">
+                <span>2 ANOS</span>
+                <span>→</span>
+            </div>
+        </article>
+
+    </div>
+
+</section>
+<section class="experience" id="experiencia">
+
+    <div class="experience-content">
+
+        <div class="experience-text reveal">
+            <p class="section-number">02 — A EXPERIÊNCIA</p>
+
+            <h2>
+                Não é apenas uma viagem.<br>
+                É sair do seu <span>mundo.</span>
+            </h2>
+
+            <p>
+                Da preparação ao lançamento, cada etapa foi pensada
+                para transformar uma viagem impossível em uma
+                experiência inesquecível.
+            </p>
+        </div>
+
+        <div class="journey-line reveal">
+            <div class="journey-point">
+                <span>01</span>
+                <strong>Preparação</strong>
+                <p>Treinamento e adaptação para sua primeira missão.</p>
+            </div>
+
+            <div class="journey-point">
+                <span>02</span>
+                <strong>Lançamento</strong>
+                <p>O momento em que a Terra começa a ficar para trás.</p>
+            </div>
+
+            <div class="journey-point">
+                <span>03</span>
+                <strong>Exploração</strong>
+                <p>Você finalmente chega onde poucos imaginaram estar.</p>
+            </div>
+        </div>
+
+        <div class="stats reveal">
+
+            <div class="stat">
+                <div>
+                    <strong class="counter" data-target="12">0</strong>
+                </div>
+                <span>PASSAGEIROS POR MISSÃO</span>
+            </div>
+
+            <div class="stat">
+                <div>
+                    <strong class="counter" data-target="3">0</strong>
+                </div>
+                <span>DESTINOS DISPONÍVEIS</span>
+            </div>
+
+            <div class="stat">
+                <div>
+                    <strong class="counter" data-target="99">0</strong><b>%</b>
+                </div>
+                <span>SATISFAÇÃO DOS VIAJANTES</span>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="final-section" id="contato">
+
+    <div class="final-planet"></div>
+
+    <div class="final-content reveal">
+
+        <p class="section-number">03 — SUA PRÓXIMA JORNADA</p>
+
+        <h2>
+            A Terra é<br>
+            só o <span>começo.</span>
+        </h2>
+
+        <p>
+            O universo está esperando. Escolha seu destino
+            e prepare-se para enxergar tudo de outra perspectiva.
+        </p>
+
+        <button class="reserve-button" id="openModal">
+            INICIAR MINHA JORNADA
+            <span>→</span>
+        </button>
+
+    </div>
+
+</section>
+
+<footer>
+    <div class="footer-content">
+
+        <div class="footer-logo">
+            ÓRBITA
+        </div>
+
+        <p>
+            Projeto conceitual desenvolvido para portfólio.
+        </p>
+
+        <p>
+            © 2026 — Jeferson Alves
+        </p>
+
+    </div>
+</footer>
+
+<!-- JANELA DE RESERVA -->
+
+<div class="modal" id="reservationModal">
+
+    <div class="modal-content">
+
+        <button class="close-modal" id="closeModal">
+            ×
+        </button>
+
+        <p class="section-number">
+            RESERVA INTERESTELAR
+        </p>
+
+        <h2>Qual será seu destino?</h2>
+
+        <form id="reservationForm">
+
+            <label>
+                Seu nome
+                <input
+                    type="text"
+                    placeholder="Como podemos chamar você?"
+                    required
+                >
+            </label>
+
+            <label>
+                Destino
+                <select required>
+                    <option value="">
+                        Selecione uma viagem
+                    </option>
+                    <option>Lua</option>
+                    <option>Marte</option>
+                    <option>Europa</option>
+                </select>
+            </label>
+
+            <label>
+                E-mail
+                <input
+                    type="email"
+                    placeholder="seuemail@exemplo.com"
+                    required
+                >
+            </label>
+
+            <button type="submit" class="submit-button">
+                SOLICITAR RESERVA →
+            </button>
+
+        </form>
+
+        <p class="form-message" id="formMessage"></p>
+
+    </div>
+
+</div>
+    <script src="script.js"></script>
+
+</body>
+</html>
