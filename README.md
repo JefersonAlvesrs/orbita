@@ -25,6 +25,7 @@ https://jefersonalvesrs.github.io/orbita/
 - Confirmação visual da reserva
 - Layout responsivo para desktop, tablet e celular
 - Interface adaptada para diferentes tamanhos de tela
+- Janelas interativas com informações detalhadas sobre cada destino
 
 ## 🛠️ Tecnologias utilizadas
 
